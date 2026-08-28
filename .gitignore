@@ -1,0 +1,17 @@
+# OS generated files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary / build files
+node_modules/
+__pycache__/
+*.pyc
+*.docx
+*.tmp
