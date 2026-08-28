@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sneh — Handcrafted Crochet Gifts &amp; Everlasting Floral Decor</title>
+
+  <!-- importing fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- link to css -->
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-icon">🌸</span>
+
+        <div class="logo-text">
+
+          <span class="brand-name">Sneh</span>
+
+          <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+        </div>
+
+      </a>
+
+      <!-- button for mobile menu -->
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- nav links -->
+
+      <nav class="main-nav" id="mainNav">
+
+        <ul>
+
+          <li><a href="index.html" class="active">Home</a></li>
+
+          <li><a href="products.html">Products</a></li>
+
+          <li>
+
+            <a href="cart.html" class="cart-link">
+
+              Cart
+
+              <span class="cart-badge">2</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="hero">
+
+      <div class="hero-bg">
+
+        <img src="images/hero-banner.jpg" alt="Artisanal Handcrafted Crochet Flowers and Decor">
+
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="container">
+
+        <div class="hero-content">
+
+          <span class="hero-label">✨ Artisanal Crochet Gifts</span>
+
+          <h1>Handcrafted Blooms That Last <span>Forever</span></h1>
+
+          <p>Discover our collection of hand-crocheted flower bouquets, amigurumi gifts, and floral decor — each piece crafted with love, one stitch at a time.</p>
+
+          <div class="hero-buttons">
+
+            <a href="products.html" class="btn btn-primary">Shop Collection</a>
+
+            <a href="#about" class="btn btn-secondary">Our Story</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="trust-strip">
+
+      <div class="container">
+
+        <div class="trust-grid">
+
+          <div class="trust-item">
+
+            <span class="trust-icon">🧶</span>
+
+            <span>100% Handcrafted</span>
+
+            <small>Made with love</small>
+
+          </div>
+
+          <div class="trust-item">
+
+            <span class="trust-icon">🌿</span>
+
+            <span>Eco-Friendly Yarn</span>
+
+            <small>Sustainable materials</small>
+
+          </div>
+
+          <div class="trust-item">
+
+            <span class="trust-icon">🎁</span>
+
+            <span>Gift Wrapped</span>
+
+            <small>Beautiful packaging</small>
+
+          </div>
+
+          <div class="trust-item">
+
+            <span class="trust-icon">🚚</span>
+
+            <span>Pan-India Delivery</span>
+
+            <small>5-7 business days</small>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="featured-section" id="featured">
+
+      <div class="container">
+
+        <h2 class="section-title">Our Bestsellers</h2>
+
+        <p class="section-subtitle">Handpicked favorites loved by our customers</p>
+
+        <div class="product-grid">
+
+          <a href="product-detail.html" class="product-card">
+
+            <div class="product-card-image">
+
+              <span class="product-badge">Bestseller</span>
+
+              <img src="images/rose-bouquet.jpg" alt="Rose Bouquet Blush - Pink and white crochet roses">
+
+            </div>
+
+            <div class="product-card-body">
+
+              <h3>Rose Bouquet Blush</h3>
+
+              <p class="product-desc">Pink &amp; white crochet roses</p>
+
+            </div>
+
+            <div class="product-card-footer">
+
+              <span class="product-price">₹1,299</span>
+
+              <button class="btn btn-cart btn-sm" type="button" onclick="event.preventDefault(); addToCart(1)">Add to Cart</button>
+
+            </div>
+
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+
+            <div class="product-card-image">
+
+              <span class="product-badge new">New</span>
+
+              <img src="images/sunflower-bouquet.jpg" alt="Sunflower Sunshine Bundle - Bright yellow crochet sunflowers">
+
+            </div>
+
+            <div class="product-card-body">
+
+              <h3>Sunflower Sunshine Bundle</h3>
+
+              <p class="product-desc">Bright yellow crochet sunflowers</p>
+
+            </div>
+
+            <div class="product-card-footer">
+
+              <span class="product-price">₹999</span>
+
+              <button class="btn btn-cart btn-sm" type="button" onclick="event.preventDefault(); addToCart(2)">Add to Cart</button>
+
+            </div>
+
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+
+            <div class="product-card-image">
+
+              <span class="product-badge">Popular</span>
+
+              <img src="images/amigurumi-bear.jpg" alt="Teddy Bear with Bouquet - Adorable amigurumi gift">
+
+            </div>
+
+            <div class="product-card-body">
+
+              <h3>Teddy Bear with Bouquet</h3>
+
+              <p class="product-desc">Adorable amigurumi gift</p>
+
+            </div>
+
+            <div class="product-card-footer">
+
+              <span class="product-price">₹1,499</span>
+
+              <button class="btn btn-cart btn-sm" type="button" onclick="event.preventDefault(); addToCart(6)">Add to Cart</button>
+
+            </div>
+
+          </a>
+
+          <a href="product-detail.html" class="product-card">
+
+            <div class="product-card-image">
+
+              <img src="images/gift-box.jpg" alt="Premium Gift Box Set - Curated crochet gift hamper">
+
+            </div>
+
+            <div class="product-card-body">
+
+              <h3>Premium Gift Box Set</h3>
+
+              <p class="product-desc">Curated crochet gift hamper</p>
+
+            </div>
+
+            <div class="product-card-footer">
+
+              <span class="product-price">₹2,199 <span class="original-price">₹2,599</span></span>
+
+              <button class="btn btn-cart btn-sm" type="button" onclick="event.preventDefault(); addToCart(7)">Add to Cart</button>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="about">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+
+          <a href="index.html" class="logo">
+
+            <span class="logo-icon">🌸</span>
+
+            <div class="logo-text">
+
+              <span class="brand-name">Sneh</span>
+
+              <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+            </div>
+
+          </a>
+
+          <p>Sneh is a homegrown brand that celebrates the art of crochet. Every product is lovingly handcrafted in Roorkee, Uttarakhand.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Products</a></li>
+
+            <li><a href="#about">About Us</a></li>
+
+            <li><a href="#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Categories</h4>
+
+          <ul>
+
+            <li><a href="products.html">Bouquets</a></li>
+
+            <li><a href="products.html">Amigurumi</a></li>
+
+            <li><a href="products.html">Decor</a></li>
+
+            <li><a href="products.html">Gift Sets</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col footer-contact" id="contact">
+
+          <h4>Contact Us</h4>
+
+          <ul>
+
+            <li>
+
+              <span class="icon">📍</span>
+
+              <span>Roorkee, Uttarakhand, India</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">📞</span>
+
+              <span>+91 98765 43210</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">✉️</span>
+
+              <span>hello@snehcrafts.in</span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- copyright text -->
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>© 2026 Sneh (स्नेह). All rights reserved. Handcrafted with ❤️ in Roorkee.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- basic js for mobile menu -->
+
+  <script>
+
+    // Toggle Mobile Navigation
+
+    const navToggle = document.getElementById('navToggle');
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        mainNav.classList.toggle('open');
+
+      });
+
+      // Close menu when clicking outside
+
+      document.addEventListener('click', (e) => {
+
+        if (!navToggle.contains(e.target) && !mainNav.contains(e.target)) {
+
+          mainNav.classList.remove('open');
+
+        }
+
+      });
+
+    }
+
+    // Handle "Add to Cart" button clicks inside product links
+
+    document.querySelectorAll('.btn-cart').forEach(button => {
+
+      button.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        e.stopPropagation();
+
+        const originalText = button.textContent;
+
+        button.textContent = 'Added ✓';
+
+        button.style.backgroundColor = '#6b8f5e';
+
+        setTimeout(() => {
+
+          button.textContent = originalText;
+
+          button.style.backgroundColor = '';
+
+        }, 1500);
+
+      });
+
+    });
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
