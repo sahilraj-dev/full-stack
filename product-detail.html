@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rose Bouquet Blush — Sneh</title>
+
+  <meta name="description" content="Handcrafted Rose Bouquet Blush in soft pink and white tones, lovingly crocheted with premium cotton yarn. Everlasting beauty by Sneh.">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <a href="index.html" class="logo">
+
+        <div class="logo-icon">🌸</div>
+
+        <div class="logo-text">
+
+          <span class="brand-name">Sneh</span>
+
+          <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+        </div>
+
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Navigation">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="products.html" class="active">Products</a></li>
+
+          <li>
+
+            <a href="cart.html" class="cart-link">
+
+              Cart <span class="cart-badge">2</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <section class="page-banner">
+
+    <div class="container">
+
+      <h1>Product Details</h1>
+
+      <div class="breadcrumb">
+
+        <a href="index.html">Home</a> &gt; <a href="products.html">Products</a> &gt; <span>Rose Bouquet Blush</span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="product-detail">
+
+    <div class="container">
+
+      <div class="product-detail-grid">
+
+        <!-- Left Column: Product Image -->
+
+        <div class="product-detail-image">
+
+          <img src="images/rose-bouquet.jpg" alt="Rose Bouquet Blush">
+
+        </div>
+
+        <!-- Right Column: Product Information -->
+
+        <div class="product-detail-info">
+
+          <div class="product-category">BOUQUETS</div>
+
+          <h1>Rose Bouquet Blush</h1>
+
+          <div class="detail-price">₹1,299</div>
+
+          <p class="detail-desc">
+
+            A stunning hand-crocheted bouquet featuring soft pink roses and pristine white daisies, complemented by delicate greenery. Each petal is carefully crafted using premium cotton yarn, making this bouquet an everlasting symbol of love and affection. Wrapped in eco-friendly kraft paper and tied with a satin ribbon — perfect for gifting.
+
+          </p>
+
+          <ul class="product-features">
+
+            <li>100% handmade with premium cotton yarn</li>
+
+            <li>Everlasting — never wilts or fades</li>
+
+            <li>Hypoallergenic &amp; allergy-free</li>
+
+            <li>Eco-friendly kraft paper wrapping</li>
+
+            <li>Dimensions: approx. 30cm tall</li>
+
+          </ul>
+
+          <div class="quantity-selector">
+
+            <label for="quantity">Quantity:</label>
+
+            <div class="qty-control">
+
+              <button type="button" class="qty-btn" id="qtyMinus" aria-label="Decrease quantity">−</button>
+
+              <input type="number" id="quantity" name="quantity" value="1" min="1" max="10" aria-label="Product quantity">
+
+              <button type="button" class="qty-btn" id="qtyPlus" aria-label="Increase quantity">+</button>
+
+            </div>
+
+          </div>
+
+          <div class="detail-buttons">
+
+            <button class="btn btn-primary" onclick="addToCart(1)">Add to Cart</button>
+
+            <a href="checkout.html" class="btn btn-outline">Buy Now</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section class="featured-section">
+
+    <div class="container">
+
+      <h2 class="section-title">You May Also Like</h2>
+
+      <p class="section-subtitle">More handcrafted goodness</p>
+
+      <div class="product-grid">
+
+        <!-- Product 1 -->
+
+        <div class="product-card">
+
+          <div class="product-card-image">
+
+            <a href="product-detail.html">
+
+              <img src="images/sunflower-bouquet.jpg" alt="Sunflower Sunshine Bundle" loading="lazy">
+
+            </a>
+
+          </div>
+
+          <div class="product-card-body">
+
+            <h3><a href="product-detail.html">Sunflower Sunshine Bundle</a></h3>
+
+            <p class="product-desc">Bright and cheerful sunflowers handcrafted with love to illuminate any room.</p>
+
+          </div>
+
+          <div class="product-card-footer">
+
+            <span class="product-price">₹999</span>
+
+            <a href="product-detail.html" class="btn btn-cart">View Details</a>
+
+          </div>
+
+        </div>
+
+        <!-- Product 2 -->
+
+        <div class="product-card">
+
+          <div class="product-card-image">
+
+            <a href="product-detail.html">
+
+              <img src="images/tulip-pot.jpg" alt="Pastel Tulip Pot" loading="lazy">
+
+            </a>
+
+          </div>
+
+          <div class="product-card-body">
+
+            <h3><a href="product-detail.html">Pastel Tulip Pot</a></h3>
+
+            <p class="product-desc">Charming miniature potted tulips in serene pastel shades for desk decor.</p>
+
+          </div>
+
+          <div class="product-card-footer">
+
+            <span class="product-price">₹1,149</span>
+
+            <a href="product-detail.html" class="btn btn-cart">View Details</a>
+
+          </div>
+
+        </div>
+
+        <!-- Product 3 -->
+
+        <div class="product-card">
+
+          <div class="product-card-image">
+
+            <a href="product-detail.html">
+
+              <img src="images/amigurumi-bear.jpg" alt="Teddy Bear with Bouquet" loading="lazy">
+
+            </a>
+
+          </div>
+
+          <div class="product-card-body">
+
+            <h3><a href="product-detail.html">Teddy Bear with Bouquet</a></h3>
+
+            <p class="product-desc">Adorably cuddly handmade amigurumi bear holding a miniature crochet bouquet.</p>
+
+          </div>
+
+          <div class="product-card-footer">
+
+            <span class="product-price">₹1,499</span>
+
+            <a href="product-detail.html" class="btn btn-cart">View Details</a>
+
+          </div>
+
+        </div>
+
+        <!-- Product 4 -->
+
+        <div class="product-card">
+
+          <div class="product-card-image">
+
+            <a href="product-detail.html">
+
+              <img src="images/gift-box.jpg" alt="Premium Gift Box Set" loading="lazy">
+
+            </a>
+
+          </div>
+
+          <div class="product-card-body">
+
+            <h3><a href="product-detail.html">Premium Gift Box Set</a></h3>
+
+            <p class="product-desc">Curated luxury hamper featuring crochet flowers, artisanal keepsakes, and notes.</p>
+
+          </div>
+
+          <div class="product-card-footer">
+
+            <span class="product-price">₹2,199</span>
+
+            <a href="product-detail.html" class="btn btn-cart">View Details</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+
+          <div class="logo">
+
+            <div class="logo-icon">🌸</div>
+
+            <div class="logo-text">
+
+              <span class="brand-name">Sneh</span>
+
+              <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+            </div>
+
+          </div>
+
+          <p>
+
+            Celebrating the art of crochet with timeless floral creations, plush companions, and artisanal gifts crafted with utmost care.
+
+          </p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">All Products</a></li>
+
+            <li><a href="cart.html">Shopping Cart</a></li>
+
+            <li><a href="checkout.html">Checkout</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Categories</h4>
+
+          <ul>
+
+            <li><a href="products.html">Bouquets</a></li>
+
+            <li><a href="products.html">Potted Plants</a></li>
+
+            <li><a href="products.html">Amigurumi</a></li>
+
+            <li><a href="products.html">Gift Sets</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Get in Touch</h4>
+
+          <ul class="footer-contact">
+
+            <li><span class="icon">📍</span> <span>Artisan Lane, Jaipur, India</span></li>
+
+            <li><span class="icon">✉️</span> <span>hello@snehstore.com</span></li>
+
+            <li><span class="icon">📞</span> <span>+91 98765 43210</span></li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+
+        <p>&copy; 2026 Sneh (स्नेह). Handcrafted with Love. All rights reserved.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    // Mobile navigation toggle
+
+    const navToggle = document.getElementById('navToggle');
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        mainNav.classList.toggle('open');
+
+      });
+
+    }
+
+    // Quantity selector controls
+
+    const qtyInput = document.getElementById('quantity');
+
+    const qtyMinus = document.getElementById('qtyMinus');
+
+    const qtyPlus = document.getElementById('qtyPlus');
+
+    if (qtyInput && qtyMinus && qtyPlus) {
+
+      qtyMinus.addEventListener('click', () => {
+
+        let val = parseInt(qtyInput.value, 10) || 1;
+
+        if (val > 1) {
+
+          qtyInput.value = val - 1;
+
+        }
+
+      });
+
+      qtyPlus.addEventListener('click', () => {
+
+        let val = parseInt(qtyInput.value, 10) || 1;
+
+        if (val < 10) {
+
+          qtyInput.value = val + 1;
+
+        }
+
+      });
+
+    }
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

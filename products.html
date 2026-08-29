@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Our Collection — Sneh</title>
+
+  <!-- importing fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <!-- link to css -->
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <a href="index.html" class="logo">
+
+        <span class="logo-icon">🌸</span>
+
+        <div class="logo-text">
+
+          <span class="brand-name">Sneh</span>
+
+          <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+        </div>
+
+      </a>
+
+      <!-- button for mobile menu -->
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- nav links -->
+
+      <nav class="main-nav" id="mainNav">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="products.html" class="active">Products</a></li>
+
+          <li>
+
+            <a href="cart.html" class="cart-link">
+
+              Cart
+
+              <span class="cart-badge">2</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <div class="page-banner">
+
+      <div class="container">
+
+        <h1>Our Collection</h1>
+
+        <div class="breadcrumb">
+
+          <a href="index.html">Home</a> &gt; <span>Products</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <section class="products-section">
+
+      <div class="container">
+
+        <!-- Filter Bar -->
+
+        <div class="filter-bar">
+
+          <div class="result-count">Showing <strong id="productCount">10</strong> products</div>
+
+          <div class="filter-tags">
+
+            <button class="filter-tag active" type="button" data-category="all">All</button>
+
+            <button class="filter-tag" type="button" data-category="bouquets">Bouquets</button>
+
+            <button class="filter-tag" type="button" data-category="amigurumi">Amigurumi</button>
+
+            <button class="filter-tag" type="button" data-category="decor">Decor</button>
+
+            <button class="filter-tag" type="button" data-category="gift-sets">Gift Sets</button>
+
+            <button class="filter-tag" type="button" data-category="accessories">Accessories</button>
+
+          </div>
+
+        </div>
+
+        <!-- Product Grid with 10 Product Cards -->
+
+        <div class="product-grid" id="products-grid"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="about">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+
+          <a href="index.html" class="logo">
+
+            <span class="logo-icon">🌸</span>
+
+            <div class="logo-text">
+
+              <span class="brand-name">Sneh</span>
+
+              <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+            </div>
+
+          </a>
+
+          <p>Sneh is a homegrown brand that celebrates the art of crochet. Every product is lovingly handcrafted in Roorkee, Uttarakhand.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Products</a></li>
+
+            <li><a href="index.html#about">About Us</a></li>
+
+            <li><a href="index.html#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Categories</h4>
+
+          <ul>
+
+            <li><a href="products.html">Bouquets</a></li>
+
+            <li><a href="products.html">Amigurumi</a></li>
+
+            <li><a href="products.html">Decor</a></li>
+
+            <li><a href="products.html">Gift Sets</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col footer-contact" id="contact">
+
+          <h4>Contact Us</h4>
+
+          <ul>
+
+            <li>
+
+              <span class="icon">📍</span>
+
+              <span>Roorkee, Uttarakhand, India</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">📞</span>
+
+              <span>+91 98765 43210</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">✉️</span>
+
+              <span>hello@snehcrafts.in</span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- copyright text -->
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>© 2026 Sneh (स्नेह). All rights reserved. Handcrafted with ❤️ in Roorkee.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- basic js for mobile menu -->
+
+  <script>
+
+    // Toggle Mobile Navigation
+
+    const navToggle = document.getElementById('navToggle');
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        mainNav.classList.toggle('open');
+
+      });
+
+      // Close menu when clicking outside
+
+      document.addEventListener('click', (e) => {
+
+        if (!navToggle.contains(e.target) && !mainNav.contains(e.target)) {
+
+          mainNav.classList.remove('open');
+
+        }
+
+      });
+
+    }
+
+    // Category Filter Functionality
+
+    const filterTags = document.querySelectorAll('.filter-tag');
+
+    const productCards = document.querySelectorAll('#productGrid .product-card');
+
+    const productCountEl = document.getElementById('productCount');
+
+    filterTags.forEach(tag => {
+
+      tag.addEventListener('click', () => {
+
+        filterTags.forEach(t => t.classList.remove('active'));
+
+        tag.classList.add('active');
+
+        const selectedCategory = tag.getAttribute('data-category');
+
+        let visibleCount = 0;
+
+        productCards.forEach(card => {
+
+          const cardCategory = card.getAttribute('data-category');
+
+          if (selectedCategory === 'all' || cardCategory === selectedCategory) {
+
+            card.style.display = 'block';
+
+            visibleCount++;
+
+          } else {
+
+            card.style.display = 'none';
+
+          }
+
+        });
+
+        if (productCountEl) {
+
+          productCountEl.textContent = visibleCount;
+
+        }
+
+      });
+
+    });
+
+    // Handle "Add to Cart" button clicks inside product links
+
+    document.querySelectorAll('.btn-cart').forEach(button => {
+
+      button.addEventListener('click', (e) => {
+
+        e.preventDefault();
+
+        e.stopPropagation();
+
+        const originalText = button.textContent;
+
+        button.textContent = 'Added ✓';
+
+        button.style.backgroundColor = '#6b8f5e';
+
+        setTimeout(() => {
+
+          button.textContent = originalText;
+
+          button.style.backgroundColor = '';
+
+        }, 1500);
+
+      });
+
+    });
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
