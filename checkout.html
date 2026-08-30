@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Complete your order at Sneh (स्नेह) — Handcrafted Crochet & Artisanal Gifting. Fast shipping across India.">
+
+  <title>Checkout — Sneh</title>
+
+  <!-- importing fonts -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+  <!-- link to css -->
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <a href="index.html" class="logo" aria-label="Sneh Home">
+
+        <span class="logo-icon">🌸</span>
+
+        <div class="logo-text">
+
+          <span class="brand-name">Sneh</span>
+
+          <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+        </div>
+
+      </a>
+
+      <!-- button for mobile menu -->
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <!-- nav links -->
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="products.html">Products</a></li>
+
+          <li>
+
+            <a href="cart.html" class="cart-link">
+
+              Cart <span class="cart-badge">2</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="page-banner">
+
+      <div class="container">
+
+        <h1>Checkout</h1>
+
+        <div class="breadcrumb">
+
+          <a href="index.html">Home</a> &gt; <a href="cart.html">Cart</a> &gt; <span>Checkout</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="checkout-section">
+
+      <div class="container">
+
+        <div class="checkout-grid">
+
+          <!-- checkout form on the left -->
+
+          <div id="order-success" style="display:none;padding:24px;background:#e8f5e9;border:1px solid #a5d6a7;border-radius:8px;margin-bottom:20px;color:#2e7d32;"></div>
+          <form class="checkout-form-card" id="checkout-form" >
+
+            <h2>Shipping Details</h2>
+
+            <div class="form-group">
+
+              <label for="name">Full Name</label>
+
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="email">Email Address</label>
+
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="phone">Phone Number</label>
+
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" required>
+
+            </div>
+
+            <div class="form-group">
+
+              <label for="address">Street Address</label>
+
+              <input type="text" id="address" name="address" placeholder="House no., Street, Area" required>
+
+            </div>
+
+            <div class="form-row">
+
+              <div class="form-group">
+
+                <label for="city">City</label>
+
+                <input type="text" id="city" name="city" placeholder="City" required>
+
+              </div>
+
+              <div class="form-group">
+
+                <label for="pincode">Pincode</label>
+
+                <input type="text" id="pincode" name="pincode" placeholder="247667" required>
+
+              </div>
+
+            </div>
+
+            <!-- Payment Method Section -->
+
+            <h2 style="margin-top: 32px;">Payment Method</h2>
+
+            <div class="payment-options">
+
+              <label class="payment-option">
+
+                <input type="radio" name="payment" value="cod" checked>
+
+                <span>💵 Cash on Delivery</span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input type="radio" name="payment" value="upi">
+
+                <span>📱 UPI / Google Pay</span>
+
+              </label>
+
+              <label class="payment-option">
+
+                <input type="radio" name="payment" value="card">
+
+                <span>💳 Credit / Debit Card</span>
+
+              </label>
+
+            </div>
+
+            <!-- Submit Button -->
+
+            <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 28px; justify-content: center;">
+
+              Place Order ✨
+
+            </button>
+
+          </form>
+
+          <!-- summary on the right -->
+
+          <div class="order-summary-card">
+
+            <h2>Order Summary</h2>
+          <div id="checkout-summary-items"></div>
+          <hr style="margin: 16px 0; border: none; border-top: 1px solid var(--border-color);">
+
+            <div class="summary-row">
+
+              <span>Subtotal</span>
+
+              <span id="checkout-subtotal">Rs. 0</span>
+
+            </div>
+
+            <div class="summary-row">
+
+              <span>Shipping</span>
+
+              <span>₹99</span>
+
+            </div>
+
+            <div class="summary-row">
+
+              <span>Gift Wrapping</span>
+
+              <span>₹49</span>
+
+            </div>
+
+            <div class="summary-row total">
+
+              <span>Total</span>
+
+              <span id="checkout-total">Rs. 0</span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="about">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+
+          <a href="index.html" class="logo">
+
+            <span class="logo-icon">🌸</span>
+
+            <div class="logo-text">
+
+              <span class="brand-name">Sneh</span>
+
+              <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+            </div>
+
+          </a>
+
+          <p>Sneh is a homegrown brand that celebrates the art of crochet. Every product is lovingly handcrafted in Roorkee, Uttarakhand.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Products</a></li>
+
+            <li><a href="cart.html">Cart</a></li>
+
+            <li><a href="checkout.html">Checkout</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Categories</h4>
+
+          <ul>
+
+            <li><a href="products.html">Bouquets</a></li>
+
+            <li><a href="products.html">Amigurumi</a></li>
+
+            <li><a href="products.html">Decor</a></li>
+
+            <li><a href="products.html">Gift Sets</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col footer-contact" id="contact">
+
+          <h4>Contact Us</h4>
+
+          <ul>
+
+            <li>
+
+              <span class="icon">📍</span>
+
+              <span>Roorkee, Uttarakhand, India</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">📞</span>
+
+              <span>+91 98765 43210</span>
+
+            </li>
+
+            <li>
+
+              <span class="icon">✉️</span>
+
+              <span>hello@snehcrafts.in</span>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- copyright text -->
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>© 2026 Sneh (स्नेह). All rights reserved. Handcrafted with ❤️ in Roorkee.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    // Toggle Mobile Navigation
+
+    const navToggle = document.getElementById('navToggle');
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        const isOpened = mainNav.classList.toggle('open');
+
+        navToggle.setAttribute('aria-expanded', isOpened);
+
+      });
+
+      // Close menu when clicking outside
+
+      document.addEventListener('click', (e) => {
+
+        if (!navToggle.contains(e.target) && !mainNav.contains(e.target)) {
+
+          mainNav.classList.remove('open');
+
+          navToggle.setAttribute('aria-expanded', 'false');
+
+        }
+
+      });
+
+    }
+
+    // Interactive payment option highlighting
+
+    const paymentOptions = document.querySelectorAll('.payment-option input[type="radio"]');
+
+    function updateSelectedPayment() {
+
+      document.querySelectorAll('.payment-option').forEach(option => {
+
+        const radio = option.querySelector('input[type="radio"]');
+
+        if (radio && radio.checked) {
+
+          option.style.borderColor = 'var(--primary-color)';
+
+          option.style.backgroundColor = 'rgba(74, 103, 65, 0.05)';
+
+        } else {
+
+          option.style.borderColor = 'var(--border-color)';
+
+          option.style.backgroundColor = 'transparent';
+
+        }
+
+      });
+
+    }
+
+    paymentOptions.forEach(radio => {
+
+      radio.addEventListener('change', updateSelectedPayment);
+
+    });
+
+    updateSelectedPayment();
+
+    // Order submission handler
+
+    function handlePlaceOrder(e) {
+
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+
+      const formCard = document.querySelector('.checkout-form-card');
+
+      formCard.innerHTML = `
+
+        <div style="text-align: center; padding: 40px 20px;">
+
+          <div style="font-size: 3.5rem; margin-bottom: 16px;">🎉</div>
+
+          <h2 style="border-bottom: none; margin-bottom: 12px; font-size: 1.8rem; color: var(--primary-dark);">Thank You, ${name}!</h2>
+
+          <p style="color: var(--text-medium); font-size: 1.05rem; margin-bottom: 24px; line-height: 1.6;">
+
+            Your order <strong>#SNEH-${Math.floor(100000 + Math.random() * 900000)}</strong> has been placed successfully!
+
+          </p>
+
+          <p style="color: var(--text-light); font-size: 0.9rem; margin-bottom: 32px;">
+
+            We've sent a confirmation email with tracking details. Your handcrafted crochet treasures are being carefully prepared with love. 🌸
+
+          </p>
+
+          <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+
+            <a href="products.html" class="btn btn-outline">Continue Shopping</a>
+
+            <a href="index.html" class="btn btn-primary">Back to Home</a>
+
+          </div>
+
+        </div>
+
+      `;
+
+    }
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

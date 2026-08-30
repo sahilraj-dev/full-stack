@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="View and manage items in your shopping cart at Sneh (स्नेह) — Handcrafted Crochet & Artisanal Gifting.">
+
+  <title>Your Cart — Sneh</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+
+</head>
+
+<body>
+
+  <header class="site-header">
+
+    <div class="container">
+
+      <a href="index.html" class="logo" aria-label="Sneh Home">
+
+        <div class="logo-icon">🌸</div>
+
+        <div class="logo-text">
+
+          <span class="brand-name">Sneh</span>
+
+          <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+        </div>
+
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+
+        <ul>
+
+          <li><a href="index.html">Home</a></li>
+
+          <li><a href="products.html">Products</a></li>
+
+          <li>
+
+            <a href="cart.html" class="cart-link active" aria-current="page">
+
+              Cart <span class="cart-badge" id="navCartBadge">2</span>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <section class="page-banner">
+
+      <div class="container">
+
+        <h1>Shopping Cart</h1>
+
+        <div class="breadcrumb">
+
+          <a href="index.html">Home</a> &gt; <span>Cart</span>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="cart-section">
+
+      <div class="container" id="cartContainer">
+
+        <!-- Cart Table Wrapper -->
+
+        <div class="cart-table-wrapper">
+
+          <table class="cart-table" id="cartTable">
+
+            <thead>
+
+              <tr>
+
+                <th>Product</th>
+
+                <th>Price</th>
+
+                <th>Quantity</th>
+
+                <th>Subtotal</th>
+
+                <th></th>
+
+              </tr>
+
+            </thead>
+
+            <tbody id="cart-body"></tbody>
+
+          </table>
+
+        </div>
+
+        <!-- Cart Summary -->
+
+        <div class="cart-summary" id="cartSummary">
+
+          <div class="cart-summary-box">
+
+            <h3>Order Summary</h3>
+
+            <div class="summary-row">
+
+              <span>Subtotal</span>
+
+              <span id="cart-subtotal">Rs. 0</span>
+
+            </div>
+
+            <div class="summary-row">
+
+              <span>Shipping</span>
+
+              <span id="summaryShipping">₹99</span>
+
+            </div>
+
+            <div class="summary-row">
+
+              <span>Gift Wrapping</span>
+
+              <span id="summaryGiftWrap">₹49</span>
+
+            </div>
+
+            <div class="summary-row total">
+
+              <span>Total</span>
+
+              <span id="cart-total">Rs. 0</span>
+
+            </div>
+
+            <div class="cart-actions">
+
+              <a href="products.html" class="btn btn-outline">Continue Shopping</a>
+
+              <a href="checkout.html" class="btn btn-primary">Proceed to Checkout</a>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Empty Cart State (Hidden by default) -->
+
+        <div class="empty-cart" id="emptyCartState" style="display: none;">
+
+          <div class="empty-icon">🌸</div>
+
+          <h2>Your Cart is Empty</h2>
+
+          <p>Looks like you haven't added any handcrafted treasures to your cart yet.</p>
+
+          <a href="products.html" class="btn btn-primary">Explore Products</a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+
+          <div class="logo">
+
+            <div class="logo-icon">🌸</div>
+
+            <div class="logo-text">
+
+              <span class="brand-name">Sneh</span>
+
+              <span class="brand-tagline">HANDCRAFTED WITH LOVE</span>
+
+            </div>
+
+          </div>
+
+          <p>Bringing warmth, joy, and handcrafted elegance to your cherished spaces through soulful crochet creations.</p>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="index.html">Home</a></li>
+
+            <li><a href="products.html">Products</a></li>
+
+            <li><a href="cart.html">Cart</a></li>
+
+            <li><a href="checkout.html">Checkout</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col">
+
+          <h4>Categories</h4>
+
+          <ul>
+
+            <li><a href="products.html">Bouquets</a></li>
+
+            <li><a href="products.html">Amigurumi</a></li>
+
+            <li><a href="products.html">Home Decor</a></li>
+
+            <li><a href="products.html">Accessories</a></li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-col footer-contact">
+
+          <h4>Get in Touch</h4>
+
+          <ul>
+
+            <li><span class="icon">📍</span> Mumbai, Maharashtra, India</li>
+
+            <li><span class="icon">✉️</span> hello@snehcrochet.in</li>
+
+            <li><span class="icon">📞</span> +91 98765 43210</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="container">
+
+        <p>&copy; 2026 Sneh (स्नेह). All rights reserved. Handcrafted with love.</p>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script>
+
+    // Navigation toggle for mobile
+
+    const navToggle = document.getElementById('navToggle');
+
+    const mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+
+      navToggle.addEventListener('click', () => {
+
+        const isOpened = mainNav.classList.toggle('open');
+
+        navToggle.setAttribute('aria-expanded', isOpened);
+
+      });
+
+    }
+
+    // Format currency in Indian Rupees
+
+    function formatCurrency(amount) {
+
+      return '₹' + Number(amount).toLocaleString('en-IN');
+
+    }
+
+    // Cart calculations and interactivity
+
+    const shippingCost = 99;
+
+    const giftWrapCost = 49;
+
+    function updateCartTotals() {
+
+      const rows = document.querySelectorAll('.cart-row');
+
+      let subtotal = 0;
+
+      let totalItems = 0;
+
+      rows.forEach(row => {
+
+        const price = parseInt(row.getAttribute('data-price'), 10) || 0;
+
+        const qtyInput = row.querySelector('.cart-qty');
+
+        let qty = parseInt(qtyInput.value, 10);
+
+        if (isNaN(qty) || qty < 1) {
+
+          qty = 1;
+
+          qtyInput.value = 1;
+
+        }
+
+        const rowSubtotal = price * qty;
+
+        row.querySelector('.item-subtotal').textContent = formatCurrency(rowSubtotal);
+
+        subtotal += rowSubtotal;
+
+        totalItems += qty;
+
+      });
+
+      // Update badge
+
+      const badge = document.getElementById('navCartBadge');
+
+      if (badge) {
+
+        badge.textContent = totalItems;
+
+      }
+
+      const summarySubtotal = document.getElementById('summarySubtotal');
+
+      const summaryTotal = document.getElementById('summaryTotal');
+
+      const emptyState = document.getElementById('emptyCartState');
+
+      const tableWrapper = document.querySelector('.cart-table-wrapper');
+
+      const summarySection = document.getElementById('cartSummary');
+
+      if (rows.length === 0) {
+
+        if (tableWrapper) tableWrapper.style.display = 'none';
+
+        if (summarySection) summarySection.style.display = 'none';
+
+        if (emptyState) emptyState.style.display = 'block';
+
+        if (badge) badge.textContent = '0';
+
+      } else {
+
+        if (tableWrapper) tableWrapper.style.display = 'block';
+
+        if (summarySection) summarySection.style.display = 'flex';
+
+        if (emptyState) emptyState.style.display = 'none';
+
+        if (summarySubtotal) summarySubtotal.textContent = formatCurrency(subtotal);
+
+        if (summaryTotal) summaryTotal.textContent = formatCurrency(subtotal + shippingCost + giftWrapCost);
+
+      }
+
+    }
+
+    // Event listener for quantity changes
+
+    document.querySelectorAll('.cart-qty').forEach(input => {
+
+      input.addEventListener('change', updateCartTotals);
+
+      input.addEventListener('input', updateCartTotals);
+
+    });
+
+    // Event listener for removing items
+
+    document.querySelectorAll('.remove-btn').forEach(btn => {
+
+      btn.addEventListener('click', function() {
+
+        const row = this.closest('.cart-row');
+
+        if (row) {
+
+          row.style.transition = 'all 0.3s ease';
+
+          row.style.opacity = '0';
+
+          row.style.transform = 'scale(0.95)';
+
+          setTimeout(() => {
+
+            row.remove();
+
+            updateCartTotals();
+
+          }, 300);
+
+        }
+
+      });
+
+    });
+
+  </script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
