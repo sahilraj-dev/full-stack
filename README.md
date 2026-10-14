@@ -11,7 +11,7 @@ A modern, responsive e-commerce web platform for handcrafted crochet gifts, plus
 - **Detailed Product Showcases**: High-resolution gallery previews, description, pricing, material specifications, and related recommendations.
 - **Dynamic Shopping Cart**: Client-side cart persistence, quantity increment/decrement, line-item totals, and real-time subtotal calculations.
 - **Structured Checkout Flow**: Multi-section checkout with delivery address inputs, shipping calculation, coupon application, and payment method selection.
-- **Aesthetic Floral Design**: Warm pastel color scheme, subtle micro-interactions, and custom iconography.
+- **Floral Design**: Warm pastel color scheme, subtle micro-interactions, and custom iconography.
 
 ## 📁 Project Structure
 ```text
